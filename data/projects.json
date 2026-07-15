@@ -1,5 +1,15 @@
 [
   {
+    "title": "StudyGame",
+    "desc": "Interactive study game built with HTML and Flutter.",
+    "image": "assets/images/studygame.jpg",
+    "badge": "Game",
+    "tags": ["HTML", "Flutter"],
+    "links": [
+      { "label": "View Code", "url": "https://github.com/Ammar25-02/StudyGame", "outline": false }
+    ]
+  },
+  {
     "title": "Real-time Hand Posture Recognition",
     "desc": "Real-time hand posture recognition system using STM32 AI Model Zoo and Time-of-Flight sensor, supporting 8 gesture classes.",
     "image": "assets/images/project1.jpg",
