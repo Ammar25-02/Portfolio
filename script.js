@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   setTimeout(() => {
     loader.classList.add("hidden");
-  }, 3200); // match your animation time
+  }, 1500); // match the loader bar animation time
 });
 
 

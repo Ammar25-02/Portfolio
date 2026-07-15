@@ -37,7 +37,7 @@
     "badge": "Image Processing",
     "tags": ["MATLAB", "Image Processing"],
     "links": [
-      { "label": "View Portfolio", "url": "https://sites.google.com/view/group02-berr4723/project-title?authuser=0", "outline": false }
+      { "label": "View Project", "url": "https://sites.google.com/view/group02-berr4723/project-title?authuser=0", "outline": false }
     ]
   },
   {
@@ -47,7 +47,7 @@
     "badge": "Embedded System",
     "tags": ["Arduino", "Sensor", "Embedded"],
     "links": [
-      { "label": "Project code", "url": "https://github.com/MrAmmar2/Portable-Optical-Turbidity-Meter.git", "outline": true }
+      { "label": "View Code", "url": "https://github.com/MrAmmar2/Portable-Optical-Turbidity-Meter.git", "outline": true }
     ]
   },
   {
@@ -72,10 +72,10 @@
   },
   {
     "title": "Food Delivery System",
-    "desc": "C++ with data structure and algorithms in the program",
+    "desc": "Console-based food delivery system built in C++ using core data structures and algorithms.",
     "image": "assets/images/Food_delivery.jpg",
-    "badge": "Data structure and algorithm",
-    "tags": ["C++", "Data structure and algorithm"],
+    "badge": "C++ / DSA",
+    "tags": ["C++", "DSA"],
     "links": [
       { "label": "View Code", "url": "https://github.com/MrAmmar2/FoodDeliverySystem/tree/main/Food_deleviry", "outline": false }
     ]

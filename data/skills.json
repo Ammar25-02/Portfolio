@@ -1,18 +1,18 @@
 [
-  "STM32",
-  "Time-of-Flight",
-  "YOLOv8",
-  "MATLAB",
-  "Python",
-  "C++",
-  "Power BI",
-  "Network",
-  "Flutter",
-  "Dart",
-  "Spring Boot",
-  "Next.js",
-  "Angular",
-  "Firebase",
-  "Problem solving",
-  "Critical Thinking"
+  {
+    "category": "Embedded & AI",
+    "items": ["STM32", "Time-of-Flight", "YOLOv8", "MATLAB"]
+  },
+  {
+    "category": "Web & Mobile",
+    "items": ["Flutter", "Dart", "Spring Boot", "Next.js", "Angular", "Firebase"]
+  },
+  {
+    "category": "Languages & Tools",
+    "items": ["Python", "C++", "Power BI", "Network"]
+  },
+  {
+    "category": "Soft Skills",
+    "items": ["Problem solving", "Critical Thinking"]
+  }
 ]

@@ -132,6 +132,8 @@ body{
 
 /* skills */
 .skill-pill-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.skill-group{margin-top:14px}
+.skill-group-title{margin:0 0 2px;font-size:0.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);opacity:0.75}
 .skill{background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); padding:8px 12px;border-radius:999px;font-weight:600;color:var(--muted);font-size:0.9rem}
 
 /* projects grid */
@@ -241,7 +243,7 @@ a{color:inherit}
   height: 100%;
   width: 0%;
   background: linear-gradient(90deg, #ff6a88, #7b7bff);
-  animation: loadingBar 3s linear forwards;
+  animation: loadingBar 1.4s linear forwards;
 }
 
 @keyframes loadingBar {
