@@ -1,0 +1,21 @@
+{
+  "education": [
+    {
+      "institution": "UTeM",
+      "degree": "B. Computer Engineering (Hons)",
+      "note": "Graduated November 2025 • CGPA: 3.4"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Protégé Technical Assistant",
+      "company": "Iburuj Network SDN BHD",
+      "period": "Aug 2025 – Apr 2026"
+    },
+    {
+      "role": "IT Support Intern",
+      "company": "Serasi Solutions / MAFI",
+      "period": "Jul – Sep 2024"
+    }
+  ]
+}

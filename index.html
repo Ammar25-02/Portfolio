@@ -102,27 +102,13 @@
               <li><strong>Phone:</strong> +60-1139063634</li>
               <li><strong>LinkedIn:</strong> <a href="https://my.linkedin.com/in/muhammad-ammar-bin-pauzan-9a3a17183" target="_blank">View profile</a></li>
             </ul>
-            <div class="skill-pill-wrap">
-              <span class="skill">STM32</span>
-              <span class="skill">Time-of-Flight</span>
-              <span class="skill">YOLOv8</span>
-              <span class="skill">MATLAB</span>
-              <span class="skill">Python</span>
-              <span class="skill">C++</span>
-              <span class="skill">Power BI</span>
-              <span class="skill">Network</span>
-              <span class="skill">Problem solving</span>
-              <span class="skill">Critical Thinking</span>
-            </div>
+            <!-- Skill pills rendered by js/render.js from data/skills.json -->
+            <div class="skill-pill-wrap" id="skills"></div>
           </div>
           <div class="about-right">
             <div class="card resume-card">
-              <h3>Education</h3>
-              <p><strong>UTeM</strong> — B. Computer Engineering (Hons)<br>Graduated November 2025 • CGPA: 3.4</p>
-              <hr />
-              <h3>Experience</h3>
-              <p><strong>Protégé Technical Assistant</strong> — Iburuj Network SDN BHD (Aug 2025 – Apr 2026)</p>
-              <p><strong>IT Support Intern</strong> — Serasi Solutions / MAFI (Jul – Sep 2024)</p>
+              <!-- Education/experience rendered by js/render.js from data/experience.json -->
+              <div id="resume-entries"></div>
               <div class="download-row">
                 <a class="btn primary small" href="assets/images/Resume_MUHAMMAD_AMMAR_2025.pdf" download>Download Resume (PDF)</a>
                 <a class="btn primary small" href="assets/images/CV_MUHAMMAD_AMMAR_2025.pdf" download>Download CV (PDF)</a>
@@ -138,132 +124,17 @@
       <div class="container">
         <h2 class="section-title">Projects</h2>
         <p class="section-lead">Selected projects — click a card to visit demo or repo.</p>
-        <div class="projects-grid">
-          <!-- Example project card -->
-          <article class="project-card reveal" tabindex="0">
-            <div class="project-media" style="background: url('assets/images/project1.jpg') center/cover no-repeat;">
-              <div class="tag">FYP 2025</div>
-            </div>
-            <div class="project-body">
-              <h3>Real-time Hand Posture Recognition</h3>
-              <p>Real-time hand posture recognition system using STM32 AI Model Zoo and Time-of-Flight sensor, supporting 8 gesture classes.</p>
-              <div class="project-meta">
-                <span>STM32</span>
-                <span>AI</span>
-                <span>ToF</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/MrAmmar2/testingfyp/tree/main/hand_posture" class="btn small">View Code</a>
-                <a href="assets/images/b022110139ThesisMUhammadAmmar.pdf" class="btn small outline">Read Paper</a>
-              </div>
-            </div>
-          </article>
-          <!-- License -->
-          <article class="project-card reveal" tabindex="0">
-  <div class="project-media" style="background: url('assets/images/license_yolo.jpg') center/cover no-repeat;">
-    <div class="tag">Computer Vision</div>
-  </div>
-  <div class="project-body">
-    <h3>License Sticker Expired Detection</h3>
-    <p>Trained and deployed YOLOv8-based image and date detection models to automatically detect expired vehicle license stickers.</p>
-    <div class="project-meta">
-      <span>YOLOv8</span>
-      <span>Python</span>
-      <span>Computer Vision</span>
-    </div>
-    <div class="project-actions">
-      <a href="#" class="btn small outline">Demo / Report</a>
-    </div>
-  </div>
-</article>
-          <!-- Leaf -->
-          <article class="project-card reveal" tabindex="0">
-  <div class="project-media" style="background: url('assets/images/leaf_disease.jpg') center/cover no-repeat;">
-    <div class="tag">Image Processing</div>
-  </div>
-  <div class="project-body">
-    <h3>Leaf Disease Detection</h3>
-    <p>MATLAB-based image processing system for detecting leaf diseases by filtering and segmenting healthy versus affected regions.</p>
-    <div class="project-meta">
-      <span>MATLAB</span>
-      <span>Image Processing</span>
-    </div>
-    <div class="project-actions">
-      <a href="https://sites.google.com/view/group02-berr4723/project-title?authuser=0" class="btn small">View Portfolio</a>
-    </div>
-  </div>
-</article>
-          <!-- idp -->
-          <article class="project-card reveal" tabindex="0">
-  <div class="project-media" style="background: url('assets/images/turbidity.jpg') center/cover no-repeat;">
-    <div class="tag">Embedded System</div>
-  </div>
-  <div class="project-body">
-    <h3>Portable Optical Turbidity Meter</h3>
-    <p>Compact Arduino-based device to measure and display water turbidity in NTU for water quality analysis.</p>
-    <div class="project-meta">
-      <span>Arduino</span>
-      <span>Sensor</span>
-      <span>Embedded</span>
-    </div>
-    <div class="project-actions">
-      <a href="https://github.com/MrAmmar2/Portable-Optical-Turbidity-Meter.git" class="btn small outline">Project code</a>
-    </div>
-  </div>
-</article>
-          <!-- Smart parking -->
-          <article class="project-card reveal" tabindex="0">
-  <div class="project-media" style="background: url('assets/images/smart_parking.jpg') center/cover no-repeat;">
-    <div class="tag">IoT Prototype</div>
-  </div>
-  <div class="project-body">
-    <h3>Smart Parking System</h3>
-    <p>Arduino-based smart parking prototype that monitors slot availability in real time and displays empty spaces.</p>
-    <div class="project-meta">
-      <span>Arduino</span>
-      <span>IoT</span>
-    </div>
-    <div class="project-actions">
-      <a href="#" class="btn small outline">View Design</a>
-    </div>
-  </div>
-</article>
-          <!-- VMS -->
-          <article class="project-card reveal" tabindex="0">
-  <div class="project-media" style="background: url('assets/images/visitor_system.jpg') center/cover no-repeat;">
-    <div class="tag">Web Application</div>
-  </div>
-  <div class="project-body">
-    <h3>Visitor Management System</h3>
-    <p>Web-based visitor management system for recording, tracking, and managing visitor entries using a database.</p>
-    <div class="project-meta">
-      <span>JavaScript</span>
-      <span>MongoDB</span>
-      <span>Web</span>
-    </div>
-    <div class="project-actions">
-      <a href="#" class="btn small outline">View System</a>
-    </div>
-  </div>
-</article>
-          <!-- Food Delivery -->
-           <article class="project-card reveal" tabindex="0">
-            <div class="project-media" style="background: url('assets/images/Food_delivery.jpg') center/cover no-repeat;">
-              <div class="tag">Data structure and algorithm</div>
-            </div>
-            <div class="project-body">
-              <h3>Food Delivery System</h3>
-              <p>C++ with data structure and algorithms in the program</p>
-              <div class="project-meta">
-                <span>C++</span>
-                <span>Data structure and algorithm</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/MrAmmar2/FoodDeliverySystem/tree/main/Food_deleviry" class="btn small">View Code</a>
-              </div>
-            </div>
-          </article>
-        </div>
+        <!-- Project cards rendered by js/render.js from data/projects.json -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Latest on GitHub — rendered by js/render.js; stays hidden if the API call fails -->
+    <section id="github" class="section" hidden>
+      <div class="container">
+        <h2 class="section-title">Latest on GitHub</h2>
+        <p class="section-lead">My most recently updated public repositories.</p>
+        <div class="projects-grid" id="github-grid"></div>
       </div>
     </section>
 
@@ -312,6 +183,7 @@
   </main>
 
   <script src="script.js"></script>
+  <script src="js/render.js"></script>
 </body>
 </html>
 

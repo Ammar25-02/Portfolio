@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Real-time Hand Posture Recognition",
+    "desc": "Real-time hand posture recognition system using STM32 AI Model Zoo and Time-of-Flight sensor, supporting 8 gesture classes.",
+    "image": "assets/images/project1.jpg",
+    "badge": "FYP 2025",
+    "tags": ["STM32", "AI", "ToF"],
+    "links": [
+      { "label": "View Code", "url": "https://github.com/MrAmmar2/testingfyp/tree/main/hand_posture", "outline": false },
+      { "label": "Read Paper", "url": "assets/images/b022110139ThesisMUhammadAmmar.pdf", "outline": true }
+    ]
+  },
+  {
+    "title": "License Sticker Expired Detection",
+    "desc": "Trained and deployed YOLOv8-based image and date detection models to automatically detect expired vehicle license stickers.",
+    "image": "assets/images/license_yolo.jpg",
+    "badge": "Computer Vision",
+    "tags": ["YOLOv8", "Python", "Computer Vision"],
+    "links": [
+      { "label": "Demo / Report", "url": "#", "outline": true }
+    ]
+  },
+  {
+    "title": "Leaf Disease Detection",
+    "desc": "MATLAB-based image processing system for detecting leaf diseases by filtering and segmenting healthy versus affected regions.",
+    "image": "assets/images/leaf_disease.jpg",
+    "badge": "Image Processing",
+    "tags": ["MATLAB", "Image Processing"],
+    "links": [
+      { "label": "View Portfolio", "url": "https://sites.google.com/view/group02-berr4723/project-title?authuser=0", "outline": false }
+    ]
+  },
+  {
+    "title": "Portable Optical Turbidity Meter",
+    "desc": "Compact Arduino-based device to measure and display water turbidity in NTU for water quality analysis.",
+    "image": "assets/images/turbidity.jpg",
+    "badge": "Embedded System",
+    "tags": ["Arduino", "Sensor", "Embedded"],
+    "links": [
+      { "label": "Project code", "url": "https://github.com/MrAmmar2/Portable-Optical-Turbidity-Meter.git", "outline": true }
+    ]
+  },
+  {
+    "title": "Smart Parking System",
+    "desc": "Arduino-based smart parking prototype that monitors slot availability in real time and displays empty spaces.",
+    "image": "assets/images/smart_parking.jpg",
+    "badge": "IoT Prototype",
+    "tags": ["Arduino", "IoT"],
+    "links": [
+      { "label": "View Design", "url": "#", "outline": true }
+    ]
+  },
+  {
+    "title": "Visitor Management System",
+    "desc": "Web-based visitor management system for recording, tracking, and managing visitor entries using a database.",
+    "image": "assets/images/visitor_system.jpg",
+    "badge": "Web Application",
+    "tags": ["JavaScript", "MongoDB", "Web"],
+    "links": [
+      { "label": "View System", "url": "#", "outline": true }
+    ]
+  },
+  {
+    "title": "Food Delivery System",
+    "desc": "C++ with data structure and algorithms in the program",
+    "image": "assets/images/Food_delivery.jpg",
+    "badge": "Data structure and algorithm",
+    "tags": ["C++", "Data structure and algorithm"],
+    "links": [
+      { "label": "View Code", "url": "https://github.com/MrAmmar2/FoodDeliverySystem/tree/main/Food_deleviry", "outline": false }
+    ]
+  }
+]
