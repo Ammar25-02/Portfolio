@@ -1,5 +1,24 @@
 [
   {
+    "title": "Wedding Video Booth",
+    "desc": "Installable PWA guestbook where wedding guests record short video messages for the couple, saved on-device in IndexedDB and exportable after the event.",
+    "image": "assets/images/wedding_booth.jpg",
+    "badge": "PWA",
+    "tags": ["HTML", "JavaScript", "PWA", "IndexedDB"],
+    "links": [
+      { "label": "Open Booth", "url": "https://ammar25-02.github.io/Wedding-booth/", "outline": false },
+      { "label": "View Code", "url": "https://github.com/Ammar25-02/Wedding-booth", "outline": true }
+    ]
+  },
+  {
+    "title": "AI Chatbot",
+    "desc": "AI chatbot built as an n8n automation workflow.",
+    "image": "assets/images/ai_chatbot.jpg",
+    "badge": "AI Automation",
+    "tags": ["n8n", "AI"],
+    "links": []
+  },
+  {
     "title": "StudyGame",
     "desc": "Interactive study game built with HTML and Flutter.",
     "image": "assets/images/studygame.jpg",
