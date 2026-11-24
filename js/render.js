@@ -130,7 +130,7 @@
         if (!Array.isArray(repos)) return;
         // Original work only: skip forks and the portfolio repo itself.
         repos = repos.filter(function (repo) {
-          return !repo.fork && repo.name.toLowerCase() !== 'mrammar2.github.io';
+          return !repo.fork && ['portfolio', 'mrammar2.github.io'].indexOf(repo.name.toLowerCase()) === -1;
         }).slice(0, 6);
         if (repos.length === 0) return;
         grid.innerHTML = repos.map(function (repo) {
