@@ -1,31 +1,11 @@
 // Data-driven rendering for the portfolio.
 // Reads data/projects.json, data/skills.json, data/experience.json and
-// rebuilds the same markup the page used to hard-code, so style.css and
-// the existing design apply unchanged. Also fills the optional
+// renders the project index, the record and the GitHub rail, so style.css
+// styles them like the rest of the page. Also fills the optional
 // "Latest on GitHub" section from the GitHub API.
 
 (function () {
   'use strict';
-
-  // script.js only observes .reveal elements that exist at load time, so
-  // dynamically rendered cards need their own observer (same settings).
-  var revealObserver = ('IntersectionObserver' in window)
-    ? new IntersectionObserver(function (entries, io) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 })
-    : null;
-
-  function observeReveals(container) {
-    container.querySelectorAll('.reveal').forEach(function (el) {
-      if (revealObserver) revealObserver.observe(el);
-      else el.classList.add('visible');
-    });
-  }
 
   function esc(value) {
     return String(value == null ? '' : value).replace(/[&<>"']/g, function (ch) {
@@ -52,26 +32,40 @@
   // ----- Projects -----
   function projectCard(p) {
     var tags = (p.tags || []).map(function (t) {
-      return '<span>' + esc(t) + '</span>';
+      return '<li>' + esc(t) + '</li>';
     }).join('');
     // Placeholder links ("#") are hidden until a real URL is filled in.
     var links = (p.links || []).filter(function (l) {
       return l.url && l.url !== '#';
     }).map(function (l) {
-      return '<a href="' + esc(l.url) + '" class="btn small' + (l.outline ? ' outline' : '') + '">' + esc(l.label) + '</a>';
+      return '<a href="' + esc(l.url) + '" class="text-link">' + esc(l.label) + '</a>';
     }).join('');
-    // The gradient layer shows through when the image is missing.
-    return '<article class="project-card reveal" tabindex="0">' +
-      '<div class="project-media" style="background: url(\'' + esc(p.image) + '\') center/cover no-repeat, linear-gradient(135deg, rgba(123,123,255,0.28), rgba(11,16,32,0.9));">' +
-        '<div class="tag">' + esc(p.badge) + '</div>' +
-      '</div>' +
-      '<div class="project-body">' +
+    // A missing image is dropped by the slot script and its cell collapses.
+    var media = p.image
+      ? '<figure class="index-photo" data-slot="project" data-alt="' + esc(p.title) + '">' +
+          '<img src="' + esc(p.image) + '" alt="" loading="lazy" width="320" height="240">' +
+        '</figure>'
+      : '';
+    return '<li class="index-row">' +
+      '<div class="index-main">' +
         '<h3>' + esc(p.title) + '</h3>' +
-        '<p>' + esc(p.desc) + '</p>' +
-        '<div class="project-meta">' + tags + '</div>' +
-        '<div class="project-actions">' + links + '</div>' +
+        '<p class="index-kind">' + esc(p.badge) + '</p>' +
       '</div>' +
-    '</article>';
+      '<div class="index-detail">' +
+        '<p>' + esc(p.desc) + '</p>' +
+        '<ul class="tags" aria-label="Built with">' + tags + '</ul>' +
+        (links ? '<div class="index-links">' + links + '</div>' : '') +
+      '</div>' +
+      media +
+    '</li>';
+  }
+
+  // Same rule as the slot script in index.html, for images added later.
+  function dropBrokenImages(container) {
+    container.querySelectorAll('[data-slot] img').forEach(function (img) {
+      if (img.complete && !img.naturalWidth) img.remove();
+      else img.addEventListener('error', function () { img.remove(); }, { once: true });
+    });
   }
 
   function renderProjects() {
@@ -79,8 +73,8 @@
     if (!grid) return Promise.resolve();
     return fetchJSON('data/projects.json').then(function (projects) {
       grid.innerHTML = projects.map(projectCard).join('');
+      dropBrokenImages(grid);
       openPdfsInNewTab(grid);
-      observeReveals(grid);
     });
   }
 
@@ -110,16 +104,19 @@
     var box = document.getElementById('resume-entries');
     if (!box) return Promise.resolve();
     return fetchJSON('data/experience.json').then(function (data) {
-      var html = '<h3>Education</h3>';
-      html += (data.education || []).map(function (e) {
-        return '<p><strong>' + esc(e.institution) + '</strong> — ' + esc(e.degree) + '<br>' + esc(e.note) + '</p>';
-      }).join('');
-      html += '<hr />';
-      html += '<h3>Experience</h3>';
+      var row = function (when, title, where) {
+        return '<li class="entry"><span class="entry-when">' + esc(when) + '</span>' +
+          '<span class="entry-what"><strong>' + esc(title) + '</strong> ' + esc(where) + '</span></li>';
+      };
+      var html = '<h3>Experience</h3><ol class="entry-list">';
       html += (data.experience || []).map(function (e) {
-        return '<p><strong>' + esc(e.role) + '</strong> — ' + esc(e.company) + ' (' + esc(e.period) + ')</p>';
+        return row(e.period, e.role, e.company);
       }).join('');
-      box.innerHTML = html;
+      html += '</ol><h3>Education</h3><ol class="entry-list">';
+      html += (data.education || []).map(function (e) {
+        return row(e.note, e.degree, e.institution);
+      }).join('');
+      box.innerHTML = html + '</ol>';
     });
   }
 
@@ -137,18 +134,13 @@
         }).slice(0, 6);
         if (repos.length === 0) return;
         grid.innerHTML = repos.map(function (repo) {
-          return '<article class="project-card reveal" tabindex="0">' +
-            '<div class="project-body">' +
-              '<h3>' + esc(repo.name) + '</h3>' +
-              '<p>' + esc(repo.description || 'No description yet.') + '</p>' +
-              '<div class="project-actions">' +
-                '<a href="' + esc(repo.html_url) + '" class="btn small" target="_blank" rel="noopener noreferrer">View Repo</a>' +
-              '</div>' +
-            '</div>' +
-          '</article>';
+          return '<li class="cell repo">' +
+            '<h3>' + esc(repo.name) + '</h3>' +
+            '<p>' + esc(repo.description || 'No description yet.') + '</p>' +
+            '<a href="' + esc(repo.html_url) + '" class="text-link" target="_blank" rel="noopener noreferrer">View Repo</a>' +
+          '</li>';
         }).join('');
         section.removeAttribute('hidden');
-        observeReveals(grid);
       });
   }
 

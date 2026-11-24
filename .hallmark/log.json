@@ -1,0 +1,31 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "Feature Stack",
+  "theme": "brutal",
+  "axes": "light/grotesk-heavy/chromatic-yellow",
+  "hero": "Ledge",
+  "nav": "floating pill",
+  "footer": "colophon block",
+  "imagery": "photographs, the user own 4",
+  "photos": [],
+  "entry": "index.html",
+  "fingerprint": "ledge/pinned-case/index/bento/rows/rail/cells/form",
+  "sections": [
+   "hero",
+   "case (pinned split)",
+   "index",
+   "bento",
+   "rows",
+   "rail",
+   "word cells",
+   "form"
+  ],
+  "signature": "the turbidity meter he built, printed hard across the first screen",
+  "waived": [],
+  "prompt": "redesign my portfolio to be look like not ai slop",
+  "date": "2026-11-24"
+ }
+]

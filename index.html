@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muhammad Ammar Portfolio</title>
+  <title>Muhammad Ammar, computer engineer and programmer</title>
 
   <link rel="icon" sizes="32x32" href="assets/images/favicon.png">
   <link rel="icon" sizes="16x16" href="assets/images/favicon.png">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <meta name="description" content="Muhammad Ammar — Embedded systems, Computer Vision, STM32, projects portfolio." />
+  <meta name="description" content="Muhammad Ammar, a computer engineer in Kajang building embedded AI, computer vision, and web and mobile apps." />
 
   <!-- Social sharing (Open Graph) -->
-  <meta property="og:title" content="Muhammad Ammar — Portfolio" />
-  <meta property="og:description" content="Programmer at Tokery Tech. Web & mobile apps, embedded AI, and computer vision projects." />
+  <meta property="og:title" content="Muhammad Ammar, portfolio" />
+  <meta property="og:description" content="Programmer at Tokery Tech. Web and mobile apps, embedded AI, and computer vision projects." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ammar25-02.github.io/mrammar2.github.io/" />
   <meta property="og:image" content="https://ammar25-02.github.io/mrammar2.github.io/assets/images/ammar1.png" />
@@ -31,195 +33,189 @@
   </script>
 </head>
 <body>
-  <!-- Loading Screen -->
-<div id="loader">
-  <div class="loader-content">
-    <img src="assets/images/Loading_icon.gif" alt="Ammar" class="loader-photo" />
-    <h2 class="loader-text">Loading portfolio...</h2>
-    <div class="loader-bar">
-      <div class="loader-progress"></div>
-    </div>
-  </div>
-</div>
+  <a class="skip" href="#main">Skip to content</a>
 
   <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="logo" href="#hero">Ammar Pauzan</a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="logo" href="#hero" aria-label="Muhammad Ammar, back to top">M. Ammar</a>
+        <nav class="nav" aria-label="Sections">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a class="nav-action" href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section id="hero" class="hero">
-      
-      <div class="hero-bg"></div>
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <div class="hero-photo-wrapper">
-          <img src="assets/images/ammar1.png" alt="Muhammad Ammar" class="hero-photo">
-        </div>
-          <h1 class="glow">Muhammad Ammar <span class="muted">— Computer Engineering</span></h1>
-          <p class="lead">• Embedded systems
-            • STM32 AI
-            • Computer vision
-            • Flutter & full-stack apps
-            • Software Developer
-          </p>
-          <div class="hero-ctas">
-            <a class="btn primary" href="#projects">See Projects</a>
-            <a class="btn outline" href="#resume">Download Resume</a>
-          </div>
-        </div>
-        <div class="hero-card" aria-hidden="true">
-          <div class="profile-pulse"></div>
-          <div class="card-content">
-            <h3>Hi, I'm Ammar</h3>
-            <p>A passionate Computer Engineering graduate working as a Programmer at Tokery Tech Sdn Bhd, where I build web and mobile applications with Flutter, Spring Boot, and Next.js. My background is in embedded AI and computer vision systems — I enjoy combining hardware and software intelligence to create efficient, real-world solutions.</p>
-            <ul class="quick-stats">
-              <li><strong>STM32</strong><span> Embedded AI</span></li>
-              <li><strong>YOLOv8</strong><span> Computer Vision</span></li>
-              <li><strong>Arduino</strong><span> Prototyping</span></li>
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="blobs">
-        <div class="blob b1"></div>
-        <div class="blob b2"></div>
-        <div class="blob b3"></div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid reveal">
-          <div class="about-left">
-            <p>
-              Motivated and detail-oriented Computer Engineering graduate from UTeM, currently working as a Programmer at Tokery Tech Sdn Bhd. I build web and mobile applications with Flutter, Spring Boot, and Next.js, and enjoy creating embedded AI and computer vision solutions.
-            </p>
-            <ul class="contact-list">
-              <li><strong>Location:</strong> Kajang, Selangor, Malaysia</li>
-              <li><strong>Email:</strong> <a href="mailto:ammarpauzan@gmail.com">ammarpauzan@gmail.com</a></li>
-              <li><strong>Phone:</strong> +60-1139063634</li>
-              <li><strong>LinkedIn:</strong> <a href="https://my.linkedin.com/in/muhammad-ammar-bin-pauzan-9a3a17183" target="_blank">View profile</a></li>
-            </ul>
-            <!-- Skill groups rendered by js/render.js from data/skills.json -->
-            <div id="skills"></div>
-          </div>
-          <div class="about-right">
-            <div class="card resume-card">
-              <!-- Education/experience rendered by js/render.js from data/experience.json -->
-              <div id="resume-entries"></div>
-              <div class="download-row">
-                <a class="btn primary small" href="assets/images/Resume_MUHAMMAD_AMMAR_2025.pdf" download>Download Resume (PDF)</a>
-                <a class="btn primary small" href="assets/images/CV_MUHAMMAD_AMMAR_2025.pdf" download>Download CV (PDF)</a>
-                <a class="btn outline small" href="#contact">Contact Me</a>
-              </div>
+      <figure class="hero-photo" data-slot="hero" data-alt="Something Ammar built, on the bench where he built it">
+        <img src="assets/images/turbidity.jpg" width="2560" height="1920" alt="The portable turbidity meter on a lab bench, its screen reading NTU, beside two sample vials" fetchpriority="high">
+      </figure>
+      <p class="hero-caption"><a href="#projects">Portable optical turbidity meter</a>, built on an Arduino.</p>
+      <div class="container hero-base">
+        <div class="hero-plate">
+          <h1>Muhammad Ammar</h1>
+          <div class="hero-side">
+            <p class="lead">Computer engineer, now a programmer at <mark>Tokery Tech</mark> in Kajang.</p>
+            <div class="hero-ctas">
+              <a class="btn btn--ink" href="#projects">See projects</a>
+              <a class="btn" href="#resume">Resume and CV</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section alt">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-lead">Selected projects — click a card to visit demo or repo.</p>
-        <!-- Project cards rendered by js/render.js from data/projects.json -->
-        <div class="projects-grid" id="projects-grid"></div>
-      </div>
-    </section>
-
-    <!-- Latest on GitHub — rendered by js/render.js; stays hidden if the API call fails -->
-    <section id="github" class="section" hidden>
-      <div class="container">
-        <h2 class="section-title">Latest on GitHub</h2>
-        <p class="section-lead">My most recently updated public repositories.</p>
-        <div class="projects-grid" id="github-grid"></div>
-      </div>
-    </section>
-
-    <section id="resume" class="section">
-      <div class="container">
-        <h2 class="section-title">Resume and CV</h2>
-        <div class="resume-reveal reveal">
-          <p>Download my full Resume or CV, including experience, education, and awards.</p>
-          <a class="btn primary" href="assets/images/Resume_MUHAMMAD_AMMAR_2025.pdf" download>Download Resume (PDF)</a>
-          <a class="btn outline" href="assets/images/Resume_MUHAMMAD_AMMAR_2025.pdf" target="_blank">Open in new tab</a>
-           <a class="btn primary" href="assets/images/CV_MUHAMMAD_AMMAR_2025.pdf" download>Download CV (PDF)</a>
-          <a class="btn outline" href="assets/images/CV_MUHAMMAD_AMMAR_2025.pdf" target="_blank">Open in new tab</a>
+    <section class="case" aria-labelledby="case-title">
+      <div class="container case-grid">
+        <div class="case-pane">
+          <h2 id="case-title">Eight hand postures, read live</h2>
+          <p class="lead">My final-year project at UTeM: an STM32 board and a Time-of-Flight sensor, running a model from the STM32 AI Model Zoo.</p>
+          <div class="case-actions">
+            <a class="btn btn--ink" href="assets/images/b022110139ThesisMUhammadAmmar.pdf">Read the thesis</a>
+            <a class="btn" href="https://github.com/MrAmmar2/testingfyp/tree/main/hand_posture">View code</a>
+          </div>
         </div>
-      </div>
-    </section>
-  
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-grid reveal">
-          <div class="contact-card card">
-            <h3>Let's talk</h3>
-            <p>Email me at <a href="mailto:ammarpauzan@gmail.com">ammarpauzan@gmail.com</a> or call <strong>+60-1139063634</strong>.</p>
-            <p>I’m open to freelance and job opportunities in software, computer vision & embedded systems.</p>
-          </div>
-          <div class="contact-card card">
-            <h3>Socials</h3>
-            <p><a href="hhttps://www.linkedin.com/in/muhammad-ammar25/" target="_blank">LinkedIn</a> • <a href="https://github.com/mrammar25" target="_blank">GitHub</a></p>
-            <h4>Send a message</h4>
-            <form action="https://formspree.io/f/xqayddlp" method="POST" class="contact-form">
-              <input type="text" name="name" placeholder="Your name" required>
-              <input type="email" name="email" placeholder="Your email" required>
-              <textarea name="message" placeholder="Your message" required></textarea>
-            <button type="submit" class="btn primary">Send Message</button>
-          </form>
-          </div>
+        <div class="case-run">
+          <figure class="case-photo" data-slot="case" data-alt="The hand posture rig: the STM32 board and ToF sensor in their enclosure">
+            <img src="assets/images/project1.jpg" width="375" height="666" alt="The STM32 board mounted in the project’s enclosure" loading="lazy">
+          </figure>
+          <dl class="cells case-facts">
+            <div class="cell cell--lead"><dt>Gesture classes</dt><dd class="num">8</dd></div>
+            <div class="cell"><dt>Board</dt><dd>STM32</dd></div>
+            <div class="cell"><dt>Sensor</dt><dd>ToF</dd></div>
+            <div class="cell cell--ink"><dt>Year</dt><dd class="num">2025</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
+    <section id="projects" class="work">
       <div class="container">
-        <p>© <span id="year">2025</span> Muhammad Ammar • <a href="https://mrammar2.github.io/" target="_blank">Site</a></p>
+        <div class="head-split">
+          <h2>What I have built</h2>
+          <p class="lead">Hardware, models and apps. Open a demo or the code where there is one.</p>
+        </div>
+        <!-- Project rows rendered by js/render.js from data/projects.json -->
+        <ol class="index" id="projects-grid"></ol>
       </div>
-    </footer>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="cells about-cells">
+          <div class="cell about-text">
+            <h2>About me</h2>
+            <p>
+              Motivated and detail-oriented Computer Engineering graduate from UTeM, currently working as a Programmer at Tokery Tech Sdn Bhd. I build web and mobile applications with Flutter, Spring Boot, and Next.js, and enjoy creating embedded AI and computer vision solutions.
+            </p>
+          </div>
+          <figure class="cell about-photo" data-slot="portrait" data-alt="Ammar, full length, outdoors">
+            <img src="assets/images/ammar.jpg" width="918" height="1653" alt="Muhammad Ammar" loading="lazy">
+          </figure>
+          <div class="cell cell--ink about-place">
+            <span class="cell-label">Based in</span>
+            <span class="cell-word">Kajang</span>
+          </div>
+          <dl class="cell contact-list">
+            <div><dt>Location</dt><dd>Kajang, Selangor, Malaysia</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:ammarpauzan@gmail.com">ammarpauzan@gmail.com</a></dd></div>
+            <div><dt>Phone</dt><dd>+60-1139063634</dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://my.linkedin.com/in/muhammad-ammar-bin-pauzan-9a3a17183" target="_blank" rel="noopener noreferrer">View profile</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="record" aria-labelledby="record-title">
+      <div class="container record-grid">
+        <h2 id="record-title">Study, work and tools</h2>
+        <div class="record-body">
+          <!-- Education/experience rendered by js/render.js from data/experience.json -->
+          <div id="resume-entries" class="entries"></div>
+          <!-- Skill groups rendered by js/render.js from data/skills.json -->
+          <div id="skills" class="cells skills"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest on GitHub: rendered by js/render.js; stays hidden if the API call fails -->
+    <section id="github" class="github" hidden>
+      <div class="container">
+        <div class="head-split">
+          <h2>Latest on GitHub</h2>
+          <p class="lead">My most recently updated public repositories.</p>
+        </div>
+        <ul class="cells repos" id="github-grid" aria-label="Recent repositories"></ul>
+      </div>
+    </section>
+
+    <section id="resume" class="resume">
+      <div class="container resume-grid">
+        <div class="resume-head">
+          <h2>Resume and CV</h2>
+          <p class="lead">Download my full Resume or CV, including experience, education, and awards.</p>
+        </div>
+        <div class="cells docs">
+          <div class="cell doc">
+            <span class="cell-word">Resume</span>
+            <div class="doc-actions">
+              <a class="btn btn--ink" href="assets/images/Resume_MUHAMMAD_AMMAR_2025.pdf" download>Download</a>
+              <a class="text-link" href="assets/images/Resume_MUHAMMAD_AMMAR_2025.pdf" target="_blank">Open in new tab</a>
+            </div>
+          </div>
+          <div class="cell doc">
+            <span class="cell-word">CV</span>
+            <div class="doc-actions">
+              <a class="btn" href="assets/images/CV_MUHAMMAD_AMMAR_2025.pdf" download>Download</a>
+              <a class="text-link" href="assets/images/CV_MUHAMMAD_AMMAR_2025.pdf" target="_blank">Open in new tab</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div class="contact-head">
+          <h2>Let’s talk</h2>
+          <p class="lead">I’m open to freelance and job opportunities in software, computer vision and embedded systems.</p>
+          <ul class="contact-lines">
+            <li><a href="mailto:ammarpauzan@gmail.com">ammarpauzan@gmail.com</a></li>
+            <li>+60-1139063634</li>
+            <li><a href="https://www.linkedin.com/in/muhammad-ammar25/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/Ammar25-02" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </div>
+        <form action="https://formspree.io/f/xqayddlp" method="POST" class="contact-form cells">
+          <label class="cell field" for="f-name"><span>Your name</span>
+            <input id="f-name" type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="cell field" for="f-email"><span>Your email</span>
+            <input id="f-email" type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="cell field field--wide" for="f-message"><span>Your message</span>
+            <textarea id="f-message" name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="cell send">Send message</button>
+        </form>
+      </div>
+    </section>
   </main>
 
+  <footer class="footer">
+    <div class="container colophon">
+      <span class="colophon-name">Muhammad Ammar</span>
+      <p>© <span id="year">2025</span> Muhammad Ammar, Kajang, Selangor. Code on <a href="https://github.com/Ammar25-02" target="_blank" rel="noopener noreferrer">GitHub</a>, profile on <a href="https://www.linkedin.com/in/muhammad-ammar25/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, the older version of this site at <a href="https://mrammar2.github.io/" target="_blank" rel="noopener noreferrer">mrammar2.github.io</a>.</p>
+    </div>
+  </footer>
+
+  <script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
   <script src="script.js"></script>
   <script src="js/render.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
